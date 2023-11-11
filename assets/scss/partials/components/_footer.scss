@@ -14,10 +14,16 @@
     padding: 0;
     display: flex;
     justify-content: center;
+
+    /* This below is new */
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     font-size: $font-size-footer;
+    margin: 5px 0;
 
     &:not(:first-of-type)::before {
       content: '\00B7';
